@@ -52,12 +52,82 @@
     }*/
     ?>
 
-    <div class="item_main_desc">
-        <div class="item_main_desc_left">
-            <div class="item_all_images">
-                <div class="item_images_all_back"></div>
+    <div class="item_main_images">
+        <div class="item_all_images">
+            <div class="item_images_all_back"></div>
+            <?php if($image1_image1||$image1_image2||$image1_image3||$image1_image4) { ?>
+            <div class="item_image1 item_image active" data-show="item_th1">
+                <?php if($image1_image1) { ?>
+                <div class="item_image1_color1 item_image_color">
+                    <img src="<? echo $image1_image1; ?>"/>
+                </div>
+                <?php } ?>
+                <?php if($image1_image2) { ?>
+                <div class="item_image1_color2 item_image_color">
+                    <img src="<? echo $image1_image2; ?>"/>
+                </div>
+                <?php } ?>
+                <?php if($image1_image3) { ?>
+                <div class="item_image1_color3 item_image_color">
+                    <img src="<? echo $image1_image3; ?>"/>
+                </div>
+                <?php } ?>
+                <?php if($image1_image4) { ?>
+                <div class="item_image1_color4 item_image_color">
+                    <img src="<? echo $image1_image4; ?>"/>
+                </div>
+                <?php } ?>
+
+
+            </div>
+            <?php } ?>
+
+            <?php if($image2_image1||$image2_image2||$image2_image3||$image2_image4) { ?>
+            <div data-show="item_th2"
+                 class="item_image2 item_image <?php if($image1_image1||$image1_image2||$image1_image3||$image1_image4) { } else {echo 'active'; } ?>">
+                <?php if($image2_image1) { ?>
+                <div class="item_image2_color1 item_image_color">
+                    <img src="<? echo $image2_image1; ?>"/>
+                </div>
+                <?php } ?>
+                <?php if($image2_image2) { ?>
+                <div class="item_image2_color2 item_image_color">
+                    <img src="<? echo $image2_image2; ?>"/>
+                </div>
+                <?php } ?>
+                <?php if($image2_image3) { ?>
+                <div class="item_image2_color3 item_image_color">
+                    <img src="<? echo $image2_image3; ?>"/>
+                </div>
+                <?php } ?>
+                <?php if($image2_image4) { ?>
+                <div class="item_image2_color4 item_image_color">
+                    <img src="<? echo $image2_image4; ?>"/>
+                </div>
+                <?php } ?>
+
+
+            </div>
+            <?php } ?>
+            <?php if($popup) { ?>
+            <div class="item_image3 item_image <?php if(!$image1_image1&&!$image1_image2&&!$image1_image3&&!$image1_image4&&!$image2_image1&&!$image2_image2&&!$image2_image3&&!$image2_image4) echo ' active'; ?>"
+                 data-show="item_th3">
+                <img src="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"
+                     alt="<?php echo $heading_title; ?>"/>
+            </div>
+            <?php } ?>
+
+            <?php if($images) { $k=4;?>
+            <?php foreach ($images as $img1) {  ?>
+            <div class="item_image<?php echo $k; ?> item_image" data-show="item_th<?php echo $k; ?>">
+                <img src="<?php print_r($img1['popup']); ?>"/>
+            </div>
+            <?php $k++; } ?>
+            <?php } ?>
+
+            <ul class="item_all_th">
                 <?php if($image1_image1||$image1_image2||$image1_image3||$image1_image4) { ?>
-                <div class="item_image1 item_image active" data-show="item_th1">
+                <li class="item_th1 item_th active" data-show="item_th1">
                     <?php if($image1_image1) { ?>
                     <div class="item_image1_color1 item_image_color">
                         <img src="<? echo $image1_image1; ?>"/>
@@ -80,12 +150,12 @@
                     <?php } ?>
 
 
-                </div>
+                </li>
                 <?php } ?>
-
                 <?php if($image2_image1||$image2_image2||$image2_image3||$image2_image4) { ?>
-                <div data-show="item_th2"
-                     class="item_image2 item_image <?php if($image1_image1||$image1_image2||$image1_image3||$image1_image4) { } else {echo 'active'; } ?>">
+
+                <li data-show="item_th2"
+                    class="item_th2 item_th <?php if($image1_image1||$image1_image2||$image1_image3||$image1_image4) { } else {echo 'active'; } ?>">
                     <?php if($image2_image1) { ?>
                     <div class="item_image2_color1 item_image_color">
                         <img src="<? echo $image2_image1; ?>"/>
@@ -108,98 +178,31 @@
                     <?php } ?>
 
 
-                </div>
+                </li>
                 <?php } ?>
                 <?php if($popup) { ?>
-                <div class="item_image3 item_image <?php if(!$image1_image1&&!$image1_image2&&!$image1_image3&&!$image1_image4&&!$image2_image1&&!$image2_image2&&!$image2_image3&&!$image2_image4) echo ' active'; ?>"
-                     data-show="item_th3">
+                <li class="item_th3 item_th <?php if(!$image1_image1&&!$image1_image2&&!$image1_image3&&!$image1_image4&&!$image2_image1&&!$image2_image2&&!$image2_image3&&!$image2_image4) echo ' active'; ?>"
+                    data-show="item_th3">
                     <img src="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"
                          alt="<?php echo $heading_title; ?>"/>
-                </div>
+                </li>
                 <?php } ?>
-
                 <?php if($images) { $k=4;?>
                 <?php foreach ($images as $img1) {  ?>
-                <div class="item_image<?php echo $k; ?> item_image" data-show="item_th<?php echo $k; ?>">
+                <li class="item_th<?php echo $k; ?> item_th " data-show="item_th<?php echo $k; ?>">
                     <img src="<?php print_r($img1['popup']); ?>"/>
-                </div>
+                </li>
                 <?php $k++; } ?>
                 <?php } ?>
 
-                <ul class="item_all_th">
-                    <?php if($image1_image1||$image1_image2||$image1_image3||$image1_image4) { ?>
-                    <li class="item_th1 item_th active" data-show="item_th1">
-                        <?php if($image1_image1) { ?>
-                        <div class="item_image1_color1 item_image_color">
-                            <img src="<? echo $image1_image1; ?>"/>
-                        </div>
-                        <?php } ?>
-                        <?php if($image1_image2) { ?>
-                        <div class="item_image1_color2 item_image_color">
-                            <img src="<? echo $image1_image2; ?>"/>
-                        </div>
-                        <?php } ?>
-                        <?php if($image1_image3) { ?>
-                        <div class="item_image1_color3 item_image_color">
-                            <img src="<? echo $image1_image3; ?>"/>
-                        </div>
-                        <?php } ?>
-                        <?php if($image1_image4) { ?>
-                        <div class="item_image1_color4 item_image_color">
-                            <img src="<? echo $image1_image4; ?>"/>
-                        </div>
-                        <?php } ?>
 
+            </ul>
 
-                    </li>
-                    <?php } ?>
-                    <?php if($image2_image1||$image2_image2||$image2_image3||$image2_image4) { ?>
+        </div>
+    </div>
+    <div class="item_main_desc">
+        <div class="item_main_desc_left">
 
-                    <li data-show="item_th2"
-                        class="item_th2 item_th <?php if($image1_image1||$image1_image2||$image1_image3||$image1_image4) { } else {echo 'active'; } ?>">
-                        <?php if($image2_image1) { ?>
-                        <div class="item_image2_color1 item_image_color">
-                            <img src="<? echo $image2_image1; ?>"/>
-                        </div>
-                        <?php } ?>
-                        <?php if($image2_image2) { ?>
-                        <div class="item_image2_color2 item_image_color">
-                            <img src="<? echo $image2_image2; ?>"/>
-                        </div>
-                        <?php } ?>
-                        <?php if($image2_image3) { ?>
-                        <div class="item_image2_color3 item_image_color">
-                            <img src="<? echo $image2_image3; ?>"/>
-                        </div>
-                        <?php } ?>
-                        <?php if($image2_image4) { ?>
-                        <div class="item_image2_color4 item_image_color">
-                            <img src="<? echo $image2_image4; ?>"/>
-                        </div>
-                        <?php } ?>
-
-
-                    </li>
-                    <?php } ?>
-                    <?php if($popup) { ?>
-                    <li class="item_th3 item_th <?php if(!$image1_image1&&!$image1_image2&&!$image1_image3&&!$image1_image4&&!$image2_image1&&!$image2_image2&&!$image2_image3&&!$image2_image4) echo ' active'; ?>"
-                        data-show="item_th3">
-                        <img src="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"
-                             alt="<?php echo $heading_title; ?>"/>
-                    </li>
-                    <?php } ?>
-                    <?php if($images) { $k=4;?>
-                    <?php foreach ($images as $img1) {  ?>
-                    <li class="item_th<?php echo $k; ?> item_th " data-show="item_th<?php echo $k; ?>">
-                        <img src="<?php print_r($img1['popup']); ?>"/>
-                    </li>
-                    <?php $k++; } ?>
-                    <?php } ?>
-
-
-                </ul>
-
-            </div>
             <div class="item_images_colors">
                 <div class="color_title">
                     Цвет наклейки:
@@ -477,7 +480,7 @@
                 </div>
 
                 <div class="item_size_you">
-                    <?php foreach ($options as $option) {?>
+                    <?php foreach ($options as $option) { ?>
                     <?php if($option['option_id']==17){ ?>
                     <input type="text" data-wi="<?=$option['option_id']?>" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['value']; ?>"  id="input-option<?php echo $option['product_option_id']; ?>" class="form-control" />
 

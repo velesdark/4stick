@@ -1,4 +1,7 @@
 jQuery(document).ready(function () {
+    jQuery('.item_image_color').each(function () {
+        jQuery(this).css({'margin-left': -jQuery(this).width() / 2 + 'px'});
+    });
 
     jQuery('[name="sob_input[2][Телефон]"],[name="sob_input[2][Телефон *]"]').mask('+7(999)-999-99-99');
     jQuery('.call_link').click(function () {
