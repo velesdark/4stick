@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <code>easy_blog_simple</code>
+    <name>Easy Blog Simple for oc2011+</name>
+    <version>2.0</version>
+    <author>CarAn</author>
+    <file path="admin/controller/common/menu.php">
+        <operation>
+            <search trim="true" index="0"><![CDATA[
+				return $this->load->view('common/menu
+            ]]></search>
+            <add position="before" trim="false" offset="0"><![CDATA[
+				$data['blog_article'] = $this->url->link('blog/article', 'token=' . $this->session->data['token'], 'SSL');
+                $data['blog_setting'] = $this->url->link('blog/setting', 'token=' . $this->session->data['token'], 'SSL');
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/view/template/common/menu.tpl">
+        <operation>
+            <search trim="true" index="0"><![CDATA[
+				<li id="system"><a class="parent"><i class="fa fa-cog fa-fw"></i> <span><?php echo $text_system; ?></span></a>
+            ]]></search>
+            <add position="before" trim="false" offset="0"><![CDATA[
+				<li id="blog"><a class="parent"><i class="fa fa-pencil-square-o fa-fw"></i> <span>Blog</span></a>
+					<ul>
+						<li><a href="<?php echo $blog_article; ?>">Articles</a></li>
+						<li><a href="<?php echo $blog_setting; ?>">Settings</a></li>
+						<li><a href="http://www.opencart.com/index.php?route=extension/extension/info&extension_id=23490" target="_blank">More functions</a></li>
+					</ul>
+				</li>
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/default/template/common/footer.tpl">
+        <operation>
+            <search trim="true" index="0"><![CDATA[
+          <?php foreach ($informations as $information) { ?>
+            ]]></search>
+            <add position="before" trim="false" offset="0"><![CDATA[
+				<li><a href="<?php echo $blog['href']; ?>"><?php echo $blog['name']; ?></a></li>
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/footer.php">
+        <operation>
+            <search trim="true" index="0"><![CDATA[
+				$data['informations'] = array();
+            ]]></search>
+            <add position="before" trim="false" offset="0"><![CDATA[
+				$data['blog'] = array(
+					'name' => $this->config->get('easy_blog_home_page_name'),
+					'href'  => $this->url->link('blog/blog')
+				);
+            ]]></add>
+        </operation>
+    </file>
+
+</modification>

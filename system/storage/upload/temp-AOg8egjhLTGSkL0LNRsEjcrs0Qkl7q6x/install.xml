@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <code>easy_blog_simple</code>
+    <name>Easy Blog Simple</name>
+    <version>2.3</version>
+    <author>CarAn</author>
+    <file path="admin/controller/common/column_left.php">
+        <operation>
+            <search trim="true" index="0"><![CDATA[
+				// Marketing
+            ]]></search>
+            <add position="before" trim="false" offset="0"><![CDATA[
+            $blog = array();
+			if ($this->user->hasPermission('access', 'blog/article')) {
+				$blog[] = array(
+					'name'	   => $this->language->get('text_blog_article'),
+					'href'     => $this->url->link('blog/article', 'token=' . $this->session->data['token'], true),
+					'children' => array()
+				);
+			}
+			if ($this->user->hasPermission('access', 'blog/setting')) {
+				$blog[] = array(
+					'name'	   => $this->language->get('text_blog_setting'),
+					'href'     => $this->url->link('blog/setting', 'token=' . $this->session->data['token'], true),
+					'children' => array()
+				);
+			}
+			$blog[] = array (
+			        'name'      => 'More functions',
+			        'href'      => 'http://www.opencart.com/index.php?route=extension/extension/info&extension_id=23490',
+			        'children'  => array()
+			);
+			if ($blog) {
+				$data['menus'][] = array(
+					'id'       => 'menu-blog',
+					'icon'	   => 'fa-pencil-square-o',
+					'name'	   => $this->language->get('text_blog'),
+					'href'     => '',
+					'children' => $blog
+				);
+			}
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/language/en-gb/common/column_left.php">
+        <operation>
+            <search trim="true" index="0"><![CDATA[
+				$_['text_other_status']              = 'Other Statuses';
+            ]]></search>
+            <add position="after" trim="false" offset="0"><![CDATA[
+				$_['text_blog']                        = 'Blog';
+				$_['text_blog_article']                = 'Articles';
+				$_['text_blog_setting']                = 'Settings';
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/default/template/common/footer.tpl">
+        <operation>
+            <search trim="true" index="0"><![CDATA[
+          <?php foreach ($informations as $information) { ?>
+            ]]></search>
+            <add position="before" trim="false" offset="0"><![CDATA[
+				<li><a href="<?php echo $blog['href']; ?>"><?php echo $blog['name']; ?></a></li>
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/footer.php">
+        <operation>
+            <search trim="true" index="0"><![CDATA[
+				$data['informations'] = array();
+            ]]></search>
+            <add position="before" trim="false" offset="0"><![CDATA[
+				$data['blog'] = array(
+					'name' => $this->config->get('easy_blog_home_page_name'),
+					'href'  => $this->url->link('blog/blog')
+				);
+            ]]></add>
+        </operation>
+    </file>
+
+</modification>

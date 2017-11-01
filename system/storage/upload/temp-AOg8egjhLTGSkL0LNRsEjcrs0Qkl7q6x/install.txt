@@ -1,0 +1,17 @@
+# AUTOMATIC INSTALLATION (OCMOD)
+-------------------------------------------------------------------------
+# ATTENTION: you need OC2 Extension Installer configured properly and working
+-------------------------------------------------------------------------
+## Installation
+-------------------------------------------------------------------------
+* Go to Admin backend:
+* install extension `easy_blog_simple_v2.x.x.ocmod.zip`,
+* go to the "Extensions / Modifications" menu and click "Refresh" button,
+* add new articles (yourstore.com/admin/index.php?route=blog/article),
+* edit blog configuration (yourstore.com/admin/index.php?route=blog/setting),
+
+Blog on your site: yourstore.com/index.php?route=blog/blog
+
+-------------------------------------------------------------------------
+If you had any question about this extension or integration on your website, you can contact with me using e-mail car23an@gmail.com
+-------------------------------------------------------------------------
