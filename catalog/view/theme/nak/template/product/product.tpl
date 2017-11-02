@@ -112,7 +112,8 @@
             <?php if($popup) { ?>
             <div class="item_image3 item_image <?php if(!$image1_image1&&!$image1_image2&&!$image1_image3&&!$image1_image4&&!$image2_image1&&!$image2_image2&&!$image2_image3&&!$image2_image4) echo ' active'; ?>"
                  data-show="item_th3">
-                <img src="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"
+                <img class="img_zoom" src="/image/<?php echo $full_image; ?>"
+                     data-large="/image/<?php echo $full_image; ?>" title="<?php echo $heading_title; ?>"
                      alt="<?php echo $heading_title; ?>"/>
             </div>
             <?php } ?>
@@ -202,6 +203,116 @@
     </div>
     <div class="item_main_desc">
         <div class="item_main_desc_left">
+
+            <!--<div class="item_short_desc">
+                <div class="item_short_desc_in">
+                    <?php /* foreach ($attribute_groups as $attribute_group) { ?>
+                    <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                    <?php if($attribute['attribute_id']==13) { ?>
+                    <?php echo $attribute['text']; ?>
+                    <?php } ?>
+                    <?php } ?>
+                    <?php } */ ?>
+                </div>
+            </div>-->
+            <div class="sku">
+                Арт. <?php echo $model; ?>
+            </div>
+
+            <div class="color_title">
+                Вид стикера
+            </div>
+
+            <div class="item_type">
+                <?php foreach ($options as $option) { ?>
+                <?php if($option['option_id']==15){ ?>
+                <?php foreach ($option['product_option_value'] as $k=>$option_value) { ?>
+                <label>
+                    <input <?php if($k==0) echo 'checked'; ?> type="radio"
+                    name="option[<?php echo $option['product_option_id']; ?>]"
+                    value="<?php echo $option_value['product_option_value_id']; ?>" />
+                    <?php echo $option_value['name']; ?>
+                </label>
+
+                <?php } ?>
+                <?php } ?>
+                <?php } ?>
+            </div>
+            <div class="color_title">
+                Размер (ш*в), см
+            </div>
+
+            <div class="item_size">
+                <?php foreach ($options as $option) { //print_r($option['product_option_value']);?>
+                <?php if($option['option_id']==16){ ?>
+                <?php foreach ($option['product_option_value'] as $k=>$option_value) { ?>
+                <label <?if($option_value['name']=="Свой размер") echo 'style="width:105px;"'?>
+                data-option-id="<?print_r($option_value['option_value_id']);?>">
+                <input <?php if($k==0) echo 'checked'; ?> type="radio"
+                name="option[<?php echo $option['product_option_id']; ?>]"
+                value="<?php echo $option_value['product_option_value_id']; ?>"
+                data-price="<?php echo str_replace(' р.','',$option_value['price']);?>" />
+                <?php echo $option_value['name']; ?>
+                </label>
+
+                <?php } ?>
+                <?php } ?>
+                <?php } ?>
+            </div>
+            <div class="hidden_size">
+                <div class="color_title">
+                    Свой размер (ш*в), см
+                </div>
+
+                <div class="item_size_you">
+                    <?php foreach ($options as $option) { ?>
+                    <?php if($option['option_id']==17){ ?>
+                    <input type="text" data-wi="<?=$option['option_id']?>"
+                           name="option[<?php echo $option['product_option_id']; ?>]"
+                           value="<?php echo $option['value']; ?>"
+                           id="input-option<?php echo $option['product_option_id']; ?>" class="form-control"/>
+
+                    <?php } ?>
+                    <?php } ?>
+                    <div class="size_sep">x</div>
+                    <?php foreach ($options as $option) { ?>
+                    <?php if($option['option_id']==18){ ?>
+                    <input type="text" data-wi="<?=$option['option_id']?>"
+                           name="option[<?php echo $option['product_option_id']; ?>]"
+                           value="<?php echo $option['value']; ?>"
+                           id="input-option<?php echo $option['product_option_id']; ?>" class="form-control"/>
+
+                    <?php } ?>
+                    <?php } ?>
+                    <div class="size_help"></div>
+                </div>
+            </div>
+            <div class="prices">
+                <div class="price">
+                    <?php echo str_replace(' р.', ' ₽',$price); ?>
+                </div>
+                <div id="or_price" style="display:none;"><?php echo str_replace(' р.', '',$price); ?></div>
+
+                <div class="add_cart">
+                    <button type="button" id="button-cart" data-loading-text="В корзину"
+                            class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
+                </div>
+                <div class="item_counts">
+                    <div class="item_count_minus">-</div>
+                    <div class="item_count">
+                        <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity"
+                               class="form-control"/>
+                        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>"/>
+                    </div>
+                    <div class="item_count_plus">+</div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="item_main_desc_right">
+
 
             <div class="item_images_colors">
                 <div class="color_title">
@@ -408,6 +519,14 @@
 
 
             </div>
+        </div>
+        <div class="clear"></div>
+        <div class="item_full_desc">
+
+            <div class="title_red">
+                Описание
+            </div>
+            <?php echo $description; ?>
             <div class="item_social" style="margin-top:30px;">
                 <span style="float:left; margin-right:10px;">Поделиться </span>
                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -418,119 +537,7 @@
             </div>
 
         </div>
-        <div class="item_main_desc_right">
-            <div class="item_short_desc">
-                <div class="item_short_desc_in">
-                    <?php foreach ($attribute_groups as $attribute_group) { ?>
-                    <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
-                    <?php if($attribute['attribute_id']==13) { ?>
-                    <?php echo $attribute['text']; ?>
-                    <?php } ?>
-                    <?php } ?>
-                    <?php } ?>
-                </div>
-            </div>
-            <div class="sku">
-                Арт. <?php echo $model; ?>
-            </div>
 
-            <div class="color_title">
-                Вид стикера
-            </div>
-
-            <div class="item_type">
-                <?php foreach ($options as $option) { ?>
-                <?php if($option['option_id']==15){ ?>
-                <?php foreach ($option['product_option_value'] as $k=>$option_value) { ?>
-                <label>
-                    <input <?php if($k==0) echo 'checked'; ?> type="radio"
-                    name="option[<?php echo $option['product_option_id']; ?>]"
-                    value="<?php echo $option_value['product_option_value_id']; ?>" />
-                    <?php echo $option_value['name']; ?>
-                </label>
-
-                <?php } ?>
-                <?php } ?>
-                <?php } ?>
-            </div>
-            <div class="color_title">
-                Размер (ш*в), см
-            </div>
-
-            <div class="item_size">
-                <?php foreach ($options as $option) { //print_r($option['product_option_value']);?>
-                <?php if($option['option_id']==16){ ?>
-                <?php foreach ($option['product_option_value'] as $k=>$option_value) { ?>
-                <label <?if($option_value['name']=="Свой размер") echo 'style="width:105px;"'?>
-                data-option-id="<?print_r($option_value['option_value_id']);?>">
-                <input <?php if($k==0) echo 'checked'; ?> type="radio"
-                name="option[<?php echo $option['product_option_id']; ?>]"
-                value="<?php echo $option_value['product_option_value_id']; ?>"
-                data-price="<?php echo str_replace(' р.','',$option_value['price']);?>" />
-                <?php echo $option_value['name']; ?>
-                </label>
-
-                <?php } ?>
-                <?php } ?>
-                <?php } ?>
-            </div>
-            <div class="hidden_size">
-                <div class="color_title">
-                    Свой размер (ш*в), см
-                </div>
-
-                <div class="item_size_you">
-                    <?php foreach ($options as $option) { ?>
-                    <?php if($option['option_id']==17){ ?>
-                    <input type="text" data-wi="<?=$option['option_id']?>" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['value']; ?>"  id="input-option<?php echo $option['product_option_id']; ?>" class="form-control" />
-
-                    <?php } ?>
-                    <?php } ?>
-                    <div class="size_sep">x</div>
-                    <?php foreach ($options as $option) { ?>
-                    <?php if($option['option_id']==18){ ?>
-                    <input type="text" data-wi="<?=$option['option_id']?>"
-                           name="option[<?php echo $option['product_option_id']; ?>]"
-                           value="<?php echo $option['value']; ?>"
-                           id="input-option<?php echo $option['product_option_id']; ?>" class="form-control"/>
-
-                    <?php } ?>
-                    <?php } ?>
-                    <div class="size_help"></div>
-                </div>
-            </div>
-            <div class="prices">
-                <div class="price">
-                    <?php echo str_replace(' р.', ' ₽',$price); ?>
-                </div>
-                <div id="or_price" style="display:none;"><?php echo str_replace(' р.', '',$price); ?></div>
-
-                <div class="add_cart">
-                    <button type="button" id="button-cart" data-loading-text="В корзину"
-                            class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
-                </div>
-                <div class="item_counts">
-                    <div class="item_count_minus">-</div>
-                    <div class="item_count">
-                        <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity"
-                               class="form-control"/>
-                        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>"/>
-                    </div>
-                    <div class="item_count_plus">+</div>
-
-                </div>
-            </div>
-
-            <div class="item_desc">
-
-                <div class="title_red">
-                    Описание
-                </div>
-                <?php echo $description; ?>
-            </div>
-
-
-        </div>
 
     </div>
 

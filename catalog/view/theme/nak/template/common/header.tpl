@@ -30,15 +30,19 @@
     <meta property="og:site_name" content="<?php echo $name; ?>"/>
 
     <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="catalog/view/javascript/jquery.jcarousel.min.js" type="text/javascript"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'>
+        <script src="catalog/view/javascript/jquery.jcarousel.min.js" type="text/javascript"></script>
     <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="catalog/view/javascript/jquery.formstyler.min.js" type="text/javascript"></script>
     <script src="catalog/view/javascript/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="catalog/view/javascript/camera.min.js" type="text/javascript"></script>
+    <script src="catalog/view/javascript/zoomsl-3.0.min.js" type="text/javascript"></script>
     <script src="catalog/view/javascript/scripts.js" type="text/javascript"></script>
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 
     <link href="catalog/view/theme/nak/stylesheet/jquery.formstyler.css" rel="stylesheet">
+    <link href="catalog/view/theme/nak/stylesheet/camera.css" rel="stylesheet">
     <link href="catalog/view/theme/nak/stylesheet/style.css" rel="stylesheet">
     <link href="catalog/view/theme/nak/stylesheet/media.css" rel="stylesheet">
     <?php foreach ($styles as $style) { ?>

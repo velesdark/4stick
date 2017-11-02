@@ -345,6 +345,18 @@ jQuery(document).ready(function () {
 
     });
 
+    jQuery(".img_zoom").imagezoomsl({
+
+        zoomrange: [1, 10],
+        cursorshadeborder: "2px solid #000",
+        magnifiereffectanimate: "fadeIn",
+        magnifierpos: "left"
+    });
+    jQuery('.item_size label:first').trigger('click');
+    jQuery('.home_slider').camera({
+        time: 3000
+    });
+
 
 });
 

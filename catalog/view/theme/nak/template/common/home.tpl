@@ -15,6 +15,12 @@
     </div>
 </div>
 <div class="content">
+    <div class="home_slider">
+        <div data-src="image/07.png"></div>
+        <div data-src="image/07.png"></div>
+        <div data-src="image/07.png"></div>
+    </div>
+
     <?php echo $content_top; ?>
     <?php echo $content_bottom; ?>
 </div>

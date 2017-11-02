@@ -299,6 +299,7 @@ class ControllerProductProduct extends Controller
             $data['image2_image2'] = $product_info['image2_image2'];
             $data['image2_image3'] = $product_info['image2_image3'];
             $data['image2_image4'] = $product_info['image2_image4'];
+            $data['full_image'] = $product_info['image'];
 
 
             if ($product_info['quantity'] <= 0) {

@@ -2506,7 +2506,7 @@ input.error {
 }
 
 .sku {
-    text-align: right;
+    text-align: left;
     color: #605342;
     font-size: 12px;
 }
@@ -2520,4 +2520,24 @@ input.error {
 .item_main_images img {
     max-height: 300px;
 
+}
+
+.home_slider {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px !important;
+
+}
+
+.home_slider img {
+    width: 100%;
+}
+
+.camera_pie {
+    display: none !important;
+}
+
+.item_full_desc {
+    width: 100%;
+    margin-top: 30px;
 }
