@@ -2479,3 +2479,38 @@
 2017-11-08 15:02:47 - PHP Notice:  Undefined index: 
                 name
                  in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2182
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                language_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1581
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                code
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1759
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                code
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1761
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1763
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                language_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1765
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2164
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2166
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2210
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2212
+2017-11-08 15:06:09 - PHP Notice:  Undefined variable: recurring in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2278
+2017-11-08 15:06:09 - PHP Notice:  Undefined variable: recurring in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2280
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2297
+2017-11-08 15:06:09 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2299
