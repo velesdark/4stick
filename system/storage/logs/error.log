@@ -2341,3 +2341,141 @@
 2017-11-08 14:52:11 - PHP Notice:  Undefined index: 
                 name
                  in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2168
+2017-11-08 14:58:38 - PHP Notice:  Undefined index: 
+                language_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1581
+2017-11-08 14:58:38 - PHP Notice:  Undefined index: 
+                code
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1759
+2017-11-08 14:58:38 - PHP Notice:  Undefined index: 
+                code
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1761
+2017-11-08 14:58:38 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1763
+2017-11-08 14:58:38 - PHP Notice:  Undefined index: 
+                language_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1765
+2017-11-08 14:58:38 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2164
+2017-11-08 14:58:38 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2166
+2017-11-08 14:58:38 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2210
+2017-11-08 14:58:38 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2212
+2017-11-08 14:58:45 - PHP Notice:  Undefined index: 
+                language_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1581
+2017-11-08 14:58:45 - PHP Notice:  Undefined index: 
+                code
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1759
+2017-11-08 14:58:45 - PHP Notice:  Undefined index: 
+                code
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1761
+2017-11-08 14:58:45 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1763
+2017-11-08 14:58:45 - PHP Notice:  Undefined index: 
+                language_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1765
+2017-11-08 14:58:45 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2164
+2017-11-08 14:58:45 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2166
+2017-11-08 14:58:45 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2210
+2017-11-08 14:58:45 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2212
+2017-11-08 15:00:06 - PHP Notice:  Undefined index: 
+                code
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1747
+2017-11-08 15:00:06 - PHP Notice:  Undefined index: 
+                code
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1749
+2017-11-08 15:00:06 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1751
+2017-11-08 15:00:06 - PHP Notice:  Undefined index: 
+                language_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1753
+2017-11-08 15:00:06 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2152
+2017-11-08 15:00:06 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2154
+2017-11-08 15:00:06 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2198
+2017-11-08 15:00:06 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2200
+2017-11-08 15:00:08 - PHP Notice:  Undefined index: 
+                code
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1747
+2017-11-08 15:00:08 - PHP Notice:  Undefined index: 
+                code
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1749
+2017-11-08 15:00:08 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1751
+2017-11-08 15:00:08 - PHP Notice:  Undefined index: 
+                language_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 1753
+2017-11-08 15:00:08 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2152
+2017-11-08 15:00:08 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2154
+2017-11-08 15:00:08 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2198
+2017-11-08 15:00:08 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2200
+2017-11-08 15:01:50 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2138
+2017-11-08 15:01:50 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2140
+2017-11-08 15:01:50 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2184
+2017-11-08 15:01:50 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2186
+2017-11-08 15:01:55 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2138
+2017-11-08 15:01:55 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2140
+2017-11-08 15:01:55 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2184
+2017-11-08 15:01:55 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2186
+2017-11-08 15:02:47 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2134
+2017-11-08 15:02:47 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2136
+2017-11-08 15:02:47 - PHP Notice:  Undefined index: 
+                customer_group_id
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2180
+2017-11-08 15:02:47 - PHP Notice:  Undefined index: 
+                name
+                 in D:\OpenServer\domains\nak5.ru\system\storage\modification\admin\view\template\catalog\product_form.tpl on line 2182

@@ -2273,7 +2273,7 @@
             {
                     ?
             >
-                html += '      <option value="<?php echo $recurring['
+                html += '<option value="<?php echo $recurring['
                 recurring_id
                 ']; ?>"><?php echo $recurring['
                 name
