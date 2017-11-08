@@ -1565,7 +1565,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript"><!--
+    <script type="text/javascript">
         <
             ? php
         if ($ckeditor) {
@@ -1591,8 +1591,8 @@
         }
             ?
         >
-        //--></script>
-    <script type="text/javascript"><!--
+    </script>
+    <script type="text/javascript">
         // Manufacturer
         $('input[name=\'manufacturer\']').autocomplete({
             'source': function (request, response) {
@@ -1735,8 +1735,8 @@
         $('#product-related').delegate('.fa-minus-circle', 'click', function () {
             $(this).parent().remove();
         });
-        //--></script>
-    <script type="text/javascript"><!--
+    </script>
+    <script type="text/javascript">
         var attribute_row =
         <
             ? php echo
@@ -1806,8 +1806,8 @@
         $('#attribute tbody tr').each(function (index, element) {
             attributeautocomplete(index);
         });
-        //--></script>
-    <script type="text/javascript"><!--
+    </script>
+    <script type="text/javascript">
         var option_row =
         <
             ? php echo
@@ -1953,8 +1953,8 @@
                 option_row++;
             }
         });
-        //--></script>
-    <script type="text/javascript"><!--
+    </script>
+    <script type="text/javascript">
         var option_value_row =
         <
             ? php echo
@@ -2141,8 +2141,8 @@
         }
 
 
-        //--></script>
-    <script type="text/javascript"><!--
+    </script>
+    <script type="text/javascript">
         var discount_row =
         <
             ? php echo
@@ -2187,8 +2187,8 @@
             discount_row++;
         }
 
-        //--></script>
-    <script type="text/javascript"><!--
+    </script>
+    <script type="text/javascript">
         var special_row =
         <
             ? php echo
@@ -2205,7 +2205,7 @@
             {
                     ?
             >
-                html += '      <option value="<?php echo $customer_group['
+                html += '<option value="<?php echo $customer_group['
                 customer_group_id
                 ']; ?>"><?php echo addslashes($customer_group['
                 name
@@ -2232,8 +2232,8 @@
             special_row++;
         }
 
-        //--></script>
-    <script type="text/javascript"><!--
+    </script>
+    <script type="text/javascript">
         var image_row =
         <
             ? php echo
@@ -2254,8 +2254,8 @@
             image_row++;
         }
 
-        //--></script>
-    <script type="text/javascript"><!--
+    </script>
+    <script type="text/javascript">
         var recurring_row =
         <
             ? php echo
@@ -2314,8 +2314,8 @@
             recurring_row++;
         }
 
-        //--></script>
-    <script type="text/javascript"><!--
+    </script>
+    <script type="text/javascript">
         $('.date').datetimepicker({
             pickTime: false
         });
@@ -2328,10 +2328,10 @@
             pickDate: true,
             pickTime: true
         });
-        //--></script>
-    <script type="text/javascript"><!--
+    </script>
+    <script type="text/javascript">
         $('#language a:first').tab('show');
         $('#option a:first').tab('show');
-        //--></script>
+    </script>
 </div>
 <?php echo $footer; ?>

@@ -227,10 +227,15 @@ function cmp($a, $b)
 
             <div class="color_title">
                 Вид стикера
+                <?php
+                    $r=array_filter($options,function($a){
+                        return $a['option_id']==15;
+                    });
+                ?>
             </div>
 
             <div class="item_type">
-                <?php foreach ($options as $option) { ?>
+                <?php foreach ($r as $option) { ?>
                 <?php if($option['option_id']==15){
                     usort($option['product_option_value'], "cmp");
 
@@ -250,9 +255,14 @@ function cmp($a, $b)
             <div class="color_title">
                 Размер (ш*в), см
             </div>
+            <?php
+                    $r=array_filter($options,function($a){
+                        return $a['option_id']==16;
+                    });
+                ?>
 
             <div class="item_size">
-                <?php foreach ($options as $option) { //print_r($option['product_option_value']);?>
+                <?php foreach ($r as $option) { //print_r($option['product_option_value']);?>
                 <?php if($option['option_id']==16){ usort($option['product_option_value'], "cmp"); ?>
                 <?php foreach ($option['product_option_value'] as $k=>$option_value) { ?>
                 <label <?if($option_value['name']=="Свой размер") echo 'style="width:105px;"'?>
@@ -272,9 +282,14 @@ function cmp($a, $b)
                 <div class="color_title">
                     Свой размер (ш*в), см
                 </div>
+                <?php
+                    $r=array_filter($options,function($a){
+                        return $a['option_id']==17;
+                    });
+                ?>
 
                 <div class="item_size_you">
-                    <?php foreach ($options as $option) { ?>
+                    <?php foreach ($r as $option) { ?>
                     <?php if($option['option_id']==17){ ?>
                     <input type="text" data-wi="<?=$option['option_id']?>"
                            name="option[<?php echo $option['product_option_id']; ?>]"
@@ -284,7 +299,13 @@ function cmp($a, $b)
                     <?php } ?>
                     <?php } ?>
                     <div class="size_sep">x</div>
-                    <?php foreach ($options as $option) { ?>
+                    <?php
+                    $r=array_filter($options,function($a){
+                        return $a['option_id']==18;
+                    });
+                    ?>
+
+                    <?php foreach ($r as $option) { ?>
                     <?php if($option['option_id']==18){ ?>
                     <input type="text" data-wi="<?=$option['option_id']?>"
                            name="option[<?php echo $option['product_option_id']; ?>]"
@@ -362,7 +383,13 @@ function cmp($a, $b)
                     </ul>
 
                     <div class="tabs__content active check_color1 check_color10" id="tab1">
-                        <?php foreach ($options as $option) { ?>
+                        <?php
+                    $r=array_filter($options,function($a){
+                        return $a['option_id']==13;
+                    });
+                ?>
+
+                        <?php foreach ($r as $option) { ?>
                         <?php if($option['option_id']==13){ ?>
                         <?php foreach ($option['product_option_value'] as $k=>$option_value) {
                         //print_R($option_value);
@@ -387,7 +414,13 @@ function cmp($a, $b)
                     </div>
 
                     <div class="tabs__content check_color2 check_color10" id="tab2">
-                        <?php foreach ($options as $option) { ?>
+                        <?php
+                    $r=array_filter($options,function($a){
+                        return $a['option_id']==14;
+                    });
+                ?>
+
+                        <?php foreach ($r as $option) { ?>
                         <?php if($option['option_id']==14){ ?>
                         <?php foreach ($option['product_option_value'] as $k=>$option_value) {
                         //print_R($option_value);
@@ -410,7 +443,13 @@ function cmp($a, $b)
                         <?php } ?>
                     </div>
                     <div class="tabs__content check_color3 check_color10" id="tab3">
-                        <?php foreach ($options as $option) { ?>
+                        <?php
+                    $r=array_filter($options,function($a){
+                        return $a['option_id']==19;
+                    });
+                ?>
+
+                        <?php foreach ($r as $option) { ?>
                         <?php if($option['option_id']==19){ ?>
                         <?php foreach ($option['product_option_value'] as $k=>$option_value) {
                         //print_R($option_value);
@@ -434,7 +473,13 @@ function cmp($a, $b)
 
                     </div>
                     <div class="tabs__content check_color4 check_color10" id="tab4">
-                        <?php foreach ($options as $option) { ?>
+                        <?php
+                    $r=array_filter($options,function($a){
+                        return $a['option_id']==20;
+                    });
+                ?>
+
+                        <?php foreach ($r as $option) { ?>
                         <?php if($option['option_id']==20){ ?>
                         <?php foreach ($option['product_option_value'] as $k=>$option_value) {
                         //print_R($option_value);
@@ -536,14 +581,7 @@ function cmp($a, $b)
                 Описание
             </div>
             <?php echo $description; ?>
-            <div class="item_social" style="margin-top:30px;">
-                <span style="float:left; margin-right:10px;">Поделиться </span>
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <div class="addthis_inline_share_toolbox" style="float:left;clear:none;"></div>
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <script type="text/javascript"
-                        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59e012e9923087cf"></script>
-            </div>
+
 
         </div>
 
