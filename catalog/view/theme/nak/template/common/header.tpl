@@ -30,7 +30,7 @@
     <meta property="og:site_name" content="<?php echo $name; ?>"/>
 
     <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
         <script src="catalog/view/javascript/jquery.jcarousel.min.js" type="text/javascript"></script>
     <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="catalog/view/javascript/jquery.formstyler.min.js" type="text/javascript"></script>

@@ -1,4 +1,10 @@
 <?php echo $header; ?>
+<?php
+function cmp($a, $b)
+{
+    return strcmp($a['name'], $b['name']);
+}
+?>
 <div class="left">
     <?php echo $column_left; ?>
 
@@ -225,7 +231,10 @@
 
             <div class="item_type">
                 <?php foreach ($options as $option) { ?>
-                <?php if($option['option_id']==15){ ?>
+                <?php if($option['option_id']==15){
+                    usort($option['product_option_value'], "cmp");
+
+                ?>
                 <?php foreach ($option['product_option_value'] as $k=>$option_value) { ?>
                 <label>
                     <input <?php if($k==0) echo 'checked'; ?> type="radio"
@@ -244,7 +253,7 @@
 
             <div class="item_size">
                 <?php foreach ($options as $option) { //print_r($option['product_option_value']);?>
-                <?php if($option['option_id']==16){ ?>
+                <?php if($option['option_id']==16){ usort($option['product_option_value'], "cmp"); ?>
                 <?php foreach ($option['product_option_value'] as $k=>$option_value) { ?>
                 <label <?if($option_value['name']=="Свой размер") echo 'style="width:105px;"'?>
                 data-option-id="<?print_r($option_value['option_value_id']);?>">

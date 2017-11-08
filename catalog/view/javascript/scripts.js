@@ -214,7 +214,7 @@ jQuery(document).ready(function () {
 
     maxheight = 0;
     jQuery('.item_all_images img').each(function () {
-        console.log(jQuery(this).height());
+        //console.log(jQuery(this).height());
         if (jQuery(this).height() >= maxheight)
             maxheight = jQuery(this).height()
     });
@@ -350,12 +350,12 @@ jQuery(document).ready(function () {
         zoomrange: [1, 10],
         cursorshadeborder: "2px solid #000",
         magnifiereffectanimate: "fadeIn",
-        magnifierpos: "left"
+        magnifierpos: "right"
     });
     jQuery('.item_size label:first').trigger('click');
-    jQuery('.home_slider').camera({
+    /*jQuery('.home_slider').camera({
         time: 3000
-    });
+    });*/
 
 
 });
