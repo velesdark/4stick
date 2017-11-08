@@ -1,4 +1,10 @@
 <?php echo $header; ?>
+<div class="home_slider">
+    <div data-src="image/07.png"></div>
+    <div data-src="image/07.png"></div>
+    <div data-src="image/07.png"></div>
+</div>
+<div class="clear"></div>
 <div class="left">
     <?php echo $column_left; ?>
 
@@ -14,12 +20,8 @@
         <a href="http://google.com" target="_blank"><img src="/image/google.png"/></a>
     </div>
 </div>
+
 <div class="content">
-    <div class="home_slider">
-        <div data-src="image/07.png"></div>
-        <div data-src="image/07.png"></div>
-        <div data-src="image/07.png"></div>
-    </div>
 
     <?php echo $content_top; ?>
     <?php echo $content_bottom; ?>

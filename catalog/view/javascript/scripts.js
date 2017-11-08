@@ -353,9 +353,9 @@ jQuery(document).ready(function () {
         magnifierpos: "right"
     });
     jQuery('.item_size label:first').trigger('click');
-    /*jQuery('.home_slider').camera({
+    jQuery('.home_slider').camera({
         time: 3000
-    });*/
+    });
 
 
 });
@@ -491,7 +491,8 @@ function changeSizeWidth() {
     var w = jQuery('.item_image1_color1 img').width();
     var h = jQuery('.item_image1_color1 img').height();
     var z = h / w;
-    jQuery('.size_help').html('Рекомендуемый размер: ' + jQuery('input[data-wi="17"]').val() + 'x' + Math.round(jQuery('input[data-wi="17"]').val() * z));
+    //jQuery('.size_help').html('Рекомендуемый размер: ' + jQuery('input[data-wi="17"]').val() + 'x' + Math.round(jQuery('input[data-wi="17"]').val() * z));
+    jQuery('input[data-wi="18"]').val(Math.round(jQuery('input[data-wi="17"]').val() * z));
     //jQuery('input[data-wi="18"]').val(jQuery('input[data-wi="17"]').val()*z);
 }
 
@@ -499,8 +500,9 @@ function changeSizeHeight() {
     var w = jQuery('.item_image1_color1 img').width();
     var h = jQuery('.item_image1_color1 img').height();
     var z = h / w;
-    jQuery('.size_help').html('Рекомендуемый размер: ' + Math.round(jQuery('input[data-wi="18"]').val() / z) + 'x' + jQuery('input[data-wi="18"]').val());
+    //jQuery('.size_help').html('Рекомендуемый размер: ' + Math.round(jQuery('input[data-wi="18"]').val() / z) + 'x' + jQuery('input[data-wi="18"]').val());
     //jQuery('input[data-wi="18"]').val(jQuery('input[data-wi="17"]').val()*z);
+    jQuery('input[data-wi="17"]').val(Math.round(jQuery('input[data-wi="18"]').val() / z));
 }
 
 function changePrice() {

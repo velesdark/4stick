@@ -1676,20 +1676,20 @@ img.red {
 
 .price {
     float: left;
-    padding-left: 15px;
-    padding-right: 10px;
+    margin-left:20px;
+    padding-left: 30px;
+    padding-right: 30px;
     height: 33px;
     position: relative;
     line-height: 33px;
     font-size: 18px;
     border: 1px solid #c40000;
     font-weight: bold;
-    border-right: 0;
     color: #c40000;
     margin-right: 30px;
 }
 
-.price:after {
+/*.price:after {
     content: '';
     position: absolute;
     width: 14px;
@@ -1697,14 +1697,15 @@ img.red {
     right: -14px;
     top: -1px;
     background: url(../images/price.png) no-repeat 0 0;
-}
+}*/
 
 .add_cart button {
     width: 157px;
     height: 33px;
     line-height: 33px;
     float: left;
-    background: url(../images/btn_cart.png) no-repeat 0 0;
+    /*background: url(../images/btn_cart.png) no-repeat 0 0;*/
+    background:#c30300;
     text-align: center;
     color: #fff;
     font-size: 18px;
@@ -1714,7 +1715,7 @@ img.red {
 }
 
 .item_counts {
-    float: right;
+    float: left;
 
 }
 
@@ -1729,7 +1730,9 @@ img.red {
     cursor: pointer;
     text-align: center;
     padding-left: 5px;
-    background: url(../images/minus.png) no-repeat 0 0;
+    /*background: url(../images/minus.png) no-repeat 0 0;*/
+    border: 1px solid #605342;
+    border-right:0;
 
 }
 
@@ -1756,7 +1759,7 @@ img.red {
 
 .item_count input {
     box-sizing: border-box;
-    width: 18px;
+    width: 40px;
     height: 33px;
     line-height: 33px;
     text-align: Center;
@@ -2524,7 +2527,7 @@ input.error {
 
 .home_slider {
     width: 100%;
-    height: auto;
+    height: 300px!important;
     margin-bottom: 20px !important;
 
 }

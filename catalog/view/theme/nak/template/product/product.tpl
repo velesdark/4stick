@@ -318,15 +318,6 @@ function cmp($a, $b)
                 </div>
             </div>
             <div class="prices">
-                <div class="price">
-                    <?php echo str_replace(' р.', ' ₽',$price); ?>
-                </div>
-                <div id="or_price" style="display:none;"><?php echo str_replace(' р.', '',$price); ?></div>
-
-                <div class="add_cart">
-                    <button type="button" id="button-cart" data-loading-text="В корзину"
-                            class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
-                </div>
                 <div class="item_counts">
                     <div class="item_count_minus">-</div>
                     <div class="item_count">
@@ -337,6 +328,16 @@ function cmp($a, $b)
                     <div class="item_count_plus">+</div>
 
                 </div>
+                <div class="price">
+                    <?php echo str_replace(' р.', ' ₽',$price); ?>
+                </div>
+                <div id="or_price" style="display:none;"><?php echo str_replace(' р.', '',$price); ?></div>
+
+                <div class="add_cart">
+                    <button type="button" id="button-cart" data-loading-text="В корзину"
+                            class="btn btn-primary btn-lg btn-block">Купить</button>
+                </div>
+
             </div>
 
 
